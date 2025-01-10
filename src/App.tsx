@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header.tsx';
 import ImageSection from './components/ImageSection.tsx';
 import ProductSection from './components/ProductSection.tsx';
+import TopProductsSection from './components/TopProductsSection.tsx';
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
       <Header />
       <ImageSection />
       <ProductSection />
+      <TopProductsSection />
     </div>
   )
 }

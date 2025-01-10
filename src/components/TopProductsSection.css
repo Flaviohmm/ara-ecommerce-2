@@ -1,0 +1,80 @@
+.top-products-section {
+    padding: 40px;
+    text-align: left;
+    background-color: #f8f9fa; /* Cor de fundo leve */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 1400px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento suave */
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex; /* Usar Flexbox para as colunas */
+    justify-content: space-between; /* Espaça as colunas */
+}
+
+.text-column {
+    flex: 1; /* Ocupa uma proporção da coluna */
+    padding-right: 20px; /* Espaço à direita */
+}
+
+.section-title {
+    font-size: 2rem; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #666; /* Cor do texto descritivo */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+.products-column {
+    flex: 1; /* Ocupa a outra proporção da coluna */
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column; /* Coloca os produtos em coluna */
+    gap: 20px; /* Espaço entre os cartões de produtos */
+    align-items: center;
+}
+
+.product-card2 {
+    background-color: white; /* Fundo Branco para cartão */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreamento leve */
+    width: 200px; /* Largura fixa do cartão */
+    text-align: center; /* Centraliza o texto */
+    padding: 16px; /* Preenchimento interno */
+    height: 350px;
+}
+
+.product-image {
+    width: 100%; /* Imagem ocupa toda a largura do cartão */
+    border-radius: 5px; /* Bordas arredondadas para a imagem */
+}
+
+.product-price {
+    font-size: 1.2rem; /* Tamanho do preço */
+    color: #333; /* Cor do preço */
+}
+
+.product-title {
+    font-size: 1.2rem; /* Tamanho do título do produto */
+    color: #000; /* Cor do título do produto */
+}
+
+.product-description {
+    font-size: 0.9rem; /* Tamanho da descrição do produto */
+    color: #999; /* Cor mais clara para a descrição do produto */
+}
+
+.view-more-button {
+    align-self: flex-end; /* Alinha o botão para a direita */
+    border: none;
+    border-radius: 32px;
+    padding-top: 4px;
+    margin-bottom: 150px;
+}
