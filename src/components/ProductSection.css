@@ -12,19 +12,37 @@
 }
 
 .filter-section h3 {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     color: #333; /* Cor do texto */
+    font-weight: bold;
 }
 
 .filter-section ul {
     list-style-type: none; /* Remove o estilo de lista */
-    padding: 0;
+    padding: 0; /* Remove preenchimento da lista */
 }
 
 .filter-section li {
     margin: 10px 0; /* Espaçamento entre os itens */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
     color: #666; /* Cor do texto */
+    position: relative; /* Para posicionar o simbolo visualizar */
+}
+
+.filter-section li .arrow {
+    margin-left: 8px;
+    font-size: 0.8em; /* Tamanho do símbolo */
+    color: #666; /* Cor do símbolo */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.filter-section li .arrow.rotate {
+    transform: rotate(180deg); /* Rotaciona a seta quando aberto */
+}
+
+.subsection {
+    list-style-type: none; /* Remove o estilo de lista */
+    padding-left: 20px; /* Indenta a subseção */
 }
 
 .publisher-filter {
@@ -35,6 +53,15 @@
 .publisher-filter label {
     display: block;
     margin: 5px 0; /* Espaçamento entre os checkboxes */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+.publisher-filter input[type="checkbox"] {
+    margin-right: 10px; /* Espaçamento entre o checkbox e o texto */
+}
+
+.checkbox-label {
+    position: relative;
+    color: #666; /* Cor do texto */
 }
 
 .products-grid {
@@ -43,15 +70,16 @@
     gap: 20px; /* Espaçamento entre os cartões */
     width: 75%; /* Largura restante */
     padding-left: 20px; /* Espaço à esquerda */
+    margin-top: 10px;
 }
 
 .product-card {
-    background-color: #f5f5f5; /* Fundo dos cartões */
     border-radius: 8px;
     overflow: hidden;
     text-align: center; /* Centraliza o texto */
     transition: transform 0.2s; /* Efeito de transição */
     height: 225px;
+    margin-top: 30px;
 }
 
 .product-card:hover {
@@ -74,7 +102,84 @@
     color: #333; /* Cor do título */
 }
 
-.product-info p {
+.product-price {
     margin: 5px 0 0;
-    color: #777; /* Cor do Preço */
+    color: #777;
+    background-color: #fff; /* Funddo branco */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 20px; /* Arredondamento total */
+    display: inline-block; /* Para ajustar o tamanho */
+    font-weight: 500; /* Negrito para destacar o preço */
+    font-size: 1.1rem; /* Tamanho do texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a checkbox */
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none; /* Esconde a checkbox padrão */
+}
+
+.custom-checkbox .checkbox-label {
+    width: 14px; /* Largura da caixa */
+    height: 14px; /* Altura da caixa */
+    background-color: white; /* Cor de fundo */
+    border-radius: 2px; /* Bordas arredondadas */
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro da caixa */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin-right: 10px; /* Espaçamento entre a checkbox e o texto */
+    transition: background-color 0.3s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-label {
+    background-color: #db1825; /* Cor de fundo quando marcada */
+    border: none;
+}
+
+/* Estilo do checkmark */
+.checkmark {
+    width: 10px; /* Largura do checkmark */
+    height: 10px; /* Altura do checkmark */
+    display: none; /* Inicialmente escondido */
+}
+
+/* Mostrar o checkmark quando a checkbox estiver marcada */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-label .checkmark {
+    display: block; /* Mostra o checkmark quando marcada */
+}
+
+.checkbox-text {
+    font-weight: 600;
+}
+
+.button-container {
+    display: inline-block;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin: 20px 0; /* Espaçamento acima e abaixo da grade de produtos */
+    width: 1290px;
+}
+
+.filter-button {
+    padding: 10px 20px; /* Ajuste o preenchimento conforme desejado */
+    margin: 0 10px; /* Espaçamento entre os botões */
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: white; /* Fundo branco */
+    color: grey; /* Cor do texto */
+    cursor: pointer; /* Mostra o cursor como um ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all 0.3s; /* Transição suave para os estilos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreamento suave */
+}
+
+.filter-button:hover {
+    border: 2px solid lightblue; /* Adiciona uma borda azul quando o mouse passa por cima */
+    background-color: rgba(240, 240, 240, 0.5); /* Fundo levemente cinza ao passar o mouse */
 }
